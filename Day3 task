@@ -1,4 +1,4 @@
-Task: to iterate over an array of objects and print the values.
+Task1: to iterate over an array of objects and print the values.
 
 eg: 
  var obj = [{
