@@ -1,0 +1,36 @@
+Task: to iterate over an array of objects and print the values.
+
+eg: 
+ var obj = [{
+  names: "John",
+  age: 30,
+  city: "New York"
+},
+{
+  names: "Doe",
+  age: 30,
+  city: "San Francisco"
+}
+];
+
+1) iterating over the object using for loop
+
+for(let i=0;i<obj.length;i++){
+console.log(obj[i])
+}
+
+2) iterating over the object using forEach loop
+
+obj.forEach(element => console.log(element))
+
+3) iterating over the object using for..in loop
+
+for(let element in obj){
+console.log(obj[element])
+}
+
+4) iterating over the object using for..of loop
+
+for(let element of obj){
+console.log(element)
+}
