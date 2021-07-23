@@ -34,3 +34,32 @@ console.log(obj[element])
 for(let element of obj){
 console.log(element)
 }
+---------------------------------------------------------------------------------------------------------------
+Task2: Display all country flags in console using restcountries API
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+xhr.onload = function () {var t = JSON.parse(this.response);
+t.forEach(element=>console.log(element.flag));};
+xhr.onerror = function () {console.log("Error", this.statusText);};
+xhr.send();
+-----------------------------------------------------------------------------------------------------------------
+Task 3: Display all country names,region, sub region and population using restcountries API
+
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+xhr.onload = function () {var t = JSON.parse(this.response);
+t.forEach(element => 
+console.log("CountryName:"+element.name,"region:"+element.region,
+"subregion:"+element.subregion,"population:"+element.population));};
+xhr.onerror = function () {console.log("Error", this.statusText);};
+xhr.send();
+----------------------------------------------------------------------------------------------------------------
+Task 4: Difference between window,screen and document in javascript
+
+Window is the main JavaScript object root, as known as the global object in a browser, and it can also be treated as the root of the document object model. We can access it as window.
+
+window.screen or just screen is a small information object about physical screen dimensions(like height, width etc)
+
+window.document or just document is the main object of the potentially visible (or better yet: rendered) document object model/DOM which has URL, cookies and different elements.
+
