@@ -1,0 +1,63 @@
+a) Get all the countries from Asia continent /region using Filter function
+
+fetch("https://restcountries.eu/rest/v2/all").then((resp) =>
+{return resp.json();}).then((result) => {
+  result.filter(element=>{
+      if(element.region == "Asia"){
+    console.log(element.name);
+      }
+  });})
+.catch((err) => {console.log(err);});
+
+---------------------------------------------------------------------------------------------------------------
+
+b) Get all the countries with a population of less than 2 lakhs using Filter function
+
+fetch("https://restcountries.eu/rest/v2/all").then((resp) =>
+{return resp.json();}).then((result) => {
+  result.filter(element=>{
+      if(element.population < 200000){
+    console.log(element.name);
+      }
+  });})
+.catch((err) => {console.log(err);});
+
+---------------------------------------------------------------------------------------------------------------------
+
+c) Print the following details name, capital, flag using forEach function
+
+fetch("https://restcountries.eu/rest/v2/all").then((resp) =>
+{return resp.json();}).then((result) => {
+  result.forEach(element=>{
+      
+    console.log("Name:"+element.name,"Flag:"+element.flag,"Capital:"+element.capital);
+      
+  });})
+.catch((err) => {console.log(err);});
+
+--------------------------------------------------------------------------------------------------------------
+
+d) Print the total population of countries using reduce function
+
+
+
+fetch("https://restcountries.eu/rest/v2/all").then((resp) =>
+{return resp.json();}).then((result) => {
+  let sum = result.reduce((total,element)=>{
+      return total+element.population
+  },0)})
+.catch((err) => {console.log(err);});
+
+console.log(sum)
+-------------------------------------------------------------------------------------------------------------------
+e) Print the country which uses US Dollars as currency.
+
+fetch("https://restcountries.eu/rest/v2/all").then((resp) =>
+{return resp.json();}).then((result) => {
+  result.filter(element=>{
+      if(element["currencies"][0]["code"] == "USD"){
+     console.log(element.name);
+      }
+  });})
+.catch((err) => {console.log(err);});
+
