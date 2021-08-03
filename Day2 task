@@ -1,0 +1,48 @@
+Difference between Browser JS and NodeJS
+
+1) NodeJS uses a standalone V8 Javascript engine with combination of C++ libraries and some add-ons developed for JS runtime environment.
+On the contrary browser JS engine depends on the browser itself as chrome uses V8 engine or Firefox uses spidermonkey.
+
+2) Node JS usage is for backend development whereas BrowserJS usage is for front end development
+
+3) NodeJS has a global object as the root parent whereas BrowserJS has window object as the root parent
+
+4) Both are single threaded execution which means line by line executions.
+
+5) Aysynchronous activites are done by libuv in NodeJS and WebAPI in BrowserJS
+
+6) The thread pool can be configured manually in the nodeJs inside the libuv whereas in the browserJS its configured by the browser IO thread.
+
+7) Module system is commonJS in nodeJS where is in browserJS its ES6(Asynchronous module system(ASM)).
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of the video(https://www.youtube.com/watch?v=SmE4OwHztCc&ab_channel=JSConf)
+
+1) Tokenizer - Tokenizer helps in the reading of HTML tags based on the "<" or "</" which helps in forming DOM tree.
+
+2) Speculative parsing - the parser would see ahead than the current execution so as to see if any image, scripts or css are there. As this happens in an another thread
+the image would be even downloaded before the parser comes to img tag
+
+3) Render/Frame Tree - This is formed by combining the DOM and CSSOM(HTML and individaul CSS tree structures)
+
+4) Layout process- Traverse the each node in the render tree and lays down each node according to the style and rule.Immedidate layouting 
+happens when there is change in font size or browser resize.
+
+5) Paint - creates Renderlayer for the objects. Inline critical CSS is painted first as it speeds up the painting process.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+typeof(1) - number
+typeof(1.1) - number
+typeof('1.1') -  string
+typeof(true) - boolean
+typeof(null) - object
+typeof(undefined) - undefined
+typeof([]) - object
+typeof({}) - object
+typeof(NaN) - number
+
+
+
+
