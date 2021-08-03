@@ -1,0 +1,21 @@
+Difference between HTTP1.1 and HTTP2
+
+1) Request Multiplexing
+
+In HTTP1.1, there were TCP connection established with the server for a single resource sharing at a time
+In HTTP2, in a single TCP conncection multiple parallel requests(inside a stream) are sent asynchronously so that data sharing is much faster.
+
+2) Header Compression
+
+In HTTP1.1 there were headers in the request sent which had to be sent each time when a request to the server is done.
+In HTTP2, a header compression strategy is used where the header content which are required for sending the request is 
+compressed and for the repeat header content a static dictonary is also used.This way the header size decreases in HTTP2 and web page loads faster
+
+3) Binary Protocol
+
+In HTTP2, the request sent to the server is transformed into binary format which is not human readable, which makes connection secure whereas in HTTP1 a plain text format 
+was used to send the request to the server. 
+
+4) Server push
+
+In HTTP2, if the server is configured with server push then with a single request, additional resource files are sent back to the client which makes the entire process faster.
