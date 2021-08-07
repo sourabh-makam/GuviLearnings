@@ -1,0 +1,28 @@
+Q.1 Do the below programs in anonymous function & IIFE
+
+a .Print odd numbers in an array
+Annonymous function code:
+
+var arr = [1,2,3,4,5,6,7]
+
+var findOdd = function(arr){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 !=0){
+            console.log(arr[i])
+        }
+    }
+}
+
+findOdd(arr);
+
+IIFE code:
+(function(arr){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]%2 !=0){
+            console.log(arr[i])
+        }
+    }
+
+})([1,2,3,4,5,6,7]);
+---------------------------------------------------------------------------------------------------------------------------------
+
